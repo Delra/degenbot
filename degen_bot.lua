@@ -1,4 +1,5 @@
 local discordia = require('discordia')
+local env = require("environment")
 local client = discordia.Client()
 
 -- A discord bot for some basic moderation. We'll start with message deletion. 
@@ -37,4 +38,4 @@ end
 
 client:on('messageCreate', checkForDeletion)
 
-client:run('Bot NzIwOTk1NjI2NTYwNjUxMzI0.XuOFsA.mw7ZKuxtcfXf3Y-lK1QcKLr7CmQ')
+client:run('Bot '..env.token)
